@@ -6,39 +6,44 @@
 }
 
 /* Page title */
-.menu {
+.page-title {
     text-align: center;
     margin: 3em;
+    box-sizing: border-box;
 }
 
 /* Section */
+
 .container {
     display: row;
-    position: absolute;
-}
-
-.col-title {
-    position:relative;
-    left: 157px;
-    bottom:24px;
-    width: 160px;
-    border:black;
-    border-style: solid;
-    ;
-
+    position: relative;
+    margin: 1em;
 }
 
 .column {
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
     display:inline-block;
-    width: 18.5%;
-    height: 25%;
-    padding: 1em;
-    margin: 0.5em;
+    width: 33.33%;
+    height: 150px;
+    padding: 0.5em;
+    padding-top:2.5em;
+    margin: 0.3em;
     background-color: rgb(172, 164, 164);
     border: black;
-    border-style: solid;
-
+    border-style:solid;
 }
+
+.col-title {
+    position:absolute;
+    top:0;
+    right:0;
+    width: 200px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
 
 h2 {
     text-align: center;
@@ -53,4 +58,45 @@ h2 {
 }
 .sushi {
     background-color: rgb(235, 224, 163);
+}
+
+p {
+    overflow:scroll;
+}
+
+/* Media Queries  Large screens */
+
+@media (min-width:992px){
+    .col-lg {
+        width: 27%;
+        height: max-content;
+    }
+}
+
+/* Media Queries  Medium screens */
+
+@media (min-width:768px) AND (max-width:991px) {  
+    .meat-section {
+        width: 45%;
+        height:fit-content;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .fish-section {
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Media Queries  Small screens */
+
+@media (max-width:767px) {
+    .col-sm {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        
+    }
 }
